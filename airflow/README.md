@@ -1,48 +1,44 @@
-# Airflow:2.10 no Docker
-Airflow 2.10 rodando no Docker. 
+# Airflow:2.10 run into Docker
 
-## Pré-requisitos
+## Requirement
 * Docker
 
-## Como instalar o Docker?
+## How to install Docker?
 https://www.youtube.com/watch?v=pRFzDVn40rw&list=PLbPvnlmz6e_L_3Zw_fGtMcMY0eAOZnN-H
 
-## Como instalar o Airflow?
-Clone o repositório
+## How to install Airflow?
+Please Clone the repo below:
 ```
 git clone https://github.com/wlcamargo/airflow
 ```
 
-Entre na pasta
+Access the folder:
 ```
 cd airflow
 ```
 
-Execute o comando para baixar as imagens e rodar os containers
+Run the container Images with the command below:
+For linux:
 ```
 sudo docker compose up -d
 ```
-
-## Warning
-Possivelmente vai dar um erro pela falta da Network. Para criar a network utilize o comando:
+For Windows: << Docker Desktop needs to be installed >>
 ```
-docker create network network-bigdata
+docker compose up -d
 ```
 
-Depois de criar, execute novamente o comando para rodar o container.
-
-## Como acessar o Airflow?
+## How to access the Airflow?
 localhost:8081
 
 ---------------------------------------------
 
-Exemplo Airflow UI:
+Airflow UI example:
 
 ![image](../images/sample-airflow-ui.png)
 
 ---------------------------------------------
 
-## Credenciais
+## Credentials
 
 username: airflow_pipe
 
@@ -50,10 +46,10 @@ password: airflow_pipe
 
 ---------------------------------------------
 
-## Conclusão
-Parabéns! você já tem o Airflow rodando no Docker!
+## Conclusion
+Congrats! Airflow is running into Docker!
 
-## 📚 Referências
+## 📚 References
 https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html
 
 ## Big Data Developer
