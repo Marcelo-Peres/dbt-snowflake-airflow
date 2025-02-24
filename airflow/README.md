@@ -17,7 +17,7 @@ Access the folder:
 cd airflow
 ```
 
-Run the container Images with the command below:
+### Run the container Images with the command below:
 For linux:
 ```
 sudo docker compose up -d
