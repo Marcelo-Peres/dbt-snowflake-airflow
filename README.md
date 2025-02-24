@@ -1,108 +1,109 @@
-# Engenharia de Dados com Apache Airflow, Snowflake e dbt
-Repositório do projeto "Engenharia de Dados com Apache Airflow, Snowflake e dbt". Este projeto é baseado no seguinte Guia Snowflake para engenharia de dados com Apache Airflow, Snowflake e dbt.
+# Data Engineering with Apache Airflow, Snowflake and dbt
+This project is based on the following Snowflake Guide for Data Engineering with Apache Airflow, Snowflake and dbt.
 
-Vale ressaltar que esse repo foi criado usando como base o repo abaixo:
-
+It is worth mentioning that this repo was created using the repo below as a base:
 ```
 https://github.com/jacob-mennell/snowflakeAirflowDBT
 ```
 
-## Passo a passo contido neste repo:
-Passo 1: Criar a conta no Snowflake 
+## Step by step project:
 
-Passo 2: Instalar o Docker
+Step 1: Create the Snowflake account
 
-Passo 3: Conectar o dbt no Snowflake
+Step 2: Install Docker on windows with GitBash
 
-Passo 4: Ingerir arquivo CSV no Snowflake com o dbt
+Step 3: Conect dbt on Snowflake
 
-Passo 5: Crie a imagem do dbt em um container
+Step 4: Ingest CSV files into Snowflake using dbt
 
-Passo 6: Orquestrar o container do dbt conectado ao Snowflake com o Airflow
+Step 5: Criate a container imagem of dbt
 
-## Siga as instruções abaixo para conseguir realizar todos os passos
+Step 6: Run dbt container and conect on Snowflake with Airflow
+
+## Follow the instructions below to complete all steps
 
 
-## Arquitetura
+## Arquiteture
 ![image](images/architecture-dbt-snowflake-airflow.png)
 
-## Introdução
+## Introduction
 
 ### Snowflake
 
-O Snowflake, uma plataforma de Data Cloud, fornece uma solução inovadora que simplifica pipelines de dados, permitindo que você foque mais em dados e análises do que na gestão de infraestrutura. Ele simplifica o armazenamento, processamento e computação quando comparado a soluções tradicionais.
+Snowflake is a Data Cloud platform solution, that provides an innovative and simplified data pipeline arquiteture, allowing you to focus more on data and analytics than infrastructure management.
+It turns easy to storage, process and compute data when compared to traditional solutions.
 
 ### Airflow
 
-O Apache Airflow é uma plataforma de gerenciamento de fluxo de trabalho de código aberto que permite criar e gerenciar pipelines de dados de forma eficiente usando grafos acíclicos direcionados (DAGs) de tarefas.
+Apache Airflow is an open source workflow management platform that allows you to efficiently create and manage data pipelines using directed acyclic graphs (DAGs) of tasks.
 
 ### Docker
 
-O Docker é utilizado neste projeto para executar o Apache Airflow e, posteriormente, o dbt em um contêiner, tornando a configuração e a portabilidade mais fáceis.
+Docker is used in this project to run Apache Airflow and later dbt in a container, making configuration and portability easier.
 
 ### dbt
 
-O dbt (data build tool) é uma ferramenta de linha de comando de código aberto que permite que analistas e engenheiros de dados transformem dados em seu data warehouse de forma mais eficiente. Ele segue uma abordagem modular e versionada para transformação de dados, permitindo que equipes construam, mantenham e documentem pipelines de dados de forma colaborativa.
+DBT (Data Build Tool) is an open source command-line tool that allows data analysts and engineers to transform data in their data warehouse more efficiently. It follows a modular, versioned approach to data transformation, enabling teams to collaboratively build, maintain, and document data pipelines.
 
-dbt simplifica o processo de escrita de código SQL, organizando-o em modelos estruturados e gerenciando dependências. Ele ganhou popularidade em arquiteturas modernas de dados, especialmente quando integrado a plataformas em nuvem como Snowflake.
+BBT simplifies the process of writing SQL code by organizing it into structured models and managing dependencies. It has gained popularity in modern data architectures, especially when integrated with cloud platforms like Snowflake.
 
-O dbt CLI é uma interface de linha de comando versátil que facilita a gestão de projetos dbt.
+The dbt CLI is a versatile command-line interface that makes managing dbt projects easy.
 
-## Requisitos Prévios
+## Prior Requirements
 
-O projeto requer os seguintes elementos:
+This project requires the following steps:
 
 * Docker
 
 * Python >=3
 
-* Uma conta Snowflake.
+* An snowflake account Snowflake.
 
-* Um usuário Snowflake com permissões necessárias, incluindo a capacidade de criar objetos no banco de dados DEMO_DB.
+* A Snowflake user with required permissions, including the ability to create objects in the DEMO_DB database.
 
-### Como instalar o Docker?
+### How to install Docker?
 https://www.youtube.com/watch?v=pRFzDVn40rw&list=PLbPvnlmz6e_L_3Zw_fGtMcMY0eAOZnN-H
 
-### Como criar um conta no Snowflake?
+### How to create a Snowflake account?
 https://www.snowflake.com/en/emea/
 
-### Como criar o user com permissões?
-Entre na pasta ```scripts``` e use o arquivo ```dbt-snowflake-setup.sql``` como base.
+### How to create users and permission?
+Access the folder ```scripts``` use the  ```dbt-snowflake-setup.sql``` as a base of it.
 
-### Como utilizar o projeto?
-Faça clone com o comando:
+### How to clone the project?
+Execute the command below:
 ```
 git clone https://github.com/wlcamargo/dbt-snowflake-airflow.git
 ```
-Entre na pasta do projeto
+Access the folder project
 ```
 cd dbt-snowflake-airflow
 ```
-Rode o container do Airflow com o comando:
+Run the Airflow container as below:
 ```
 cd airflow
 docker compose up -d
 ```
-Resultado esperado:
+Expected result:
 
 ![image](images/ariflow-ok-git-bash.png)
 
 
-## Como acessar o Airflow?
-Digite no navegador:
+## How to access the Airflow?
+Using the broswer of your wish type:
 ```
 localhost:8081
 ```
 
 ---------------------------------------------
 
-Exemplo Airflow UI:
+Airflow UI image:
 
 ![image](images/sample-airflow-ui.png)
 
 ---------------------------------------------
 
-## Credenciais do Airlflow
+## Airlflow Credentials
 
 username: airflow_pipe
 
@@ -110,100 +111,101 @@ password: airflow_pipe
 
 ---------------------------------------------
 
-## Como instalar o dbt?
-### Crie o ambiente virtual
+## How to install the dbt?
+### Create a virtual environment
 ```
 python3 -m venv .env
 ```
 
-### Ative o ambiente virtual (Linux)
+### Activate in (Linux)
 ```
 source venv/bin/activate
 ```
 
-### Ative o ambiente virtual (Windows) via git bash
+### Activate in (Windows) by git bash
 ```
 source .env/Scripts/activate
 ```
 
-### No ambiente virtual ativo instale as libs
+### Inside the virtual environment install dependencies from file
 ```
 pip install -r requirements.txt
 ```
 
-## Como verificar se o dbt foi instalado?
+## How to verify DBT installation?
 ```
 dbt --version
 ```
 
-Resultado esperado:
+Expected result:
 
 ![image](images/dbt-ok-git-bash.png)
 
 
-## Como configurar o dbt para conectar no Snowflake?
-Entre na pasta ```src/dbt``` e altere o nome do arquivo ```example_profiles.yml``` para ```profiles.yml```
+## How to configure DBT connection into Snowflake?
+Access the folder ```src/dbt``` and use the file ```profiles.yml```
 
-Altere o ```account: your-account``` para sua conta do Snowflake
+Change account settings ```account: your-account``` with Snowflake Credentials
 
-Para verificar se a conexão está ok, use o comando:
+To see if the procedure is right, use the command below:
 ```
 cd src/dbt
 dbt debug
 ```
 
-Resultado esperado:
+Expected result:
 
 ![image](images/connection-dbt-snow-ok-git-bash.png)
 
-## Como ingerir dados no dbt?
-Use o comando abaixo:
+## How to interact with DBT?
+Use the  command below:
 ```
 cd src/dbt
 dbt seed
 ```
 
-Resultado esperado:
+Expected result:
 
 ![image](images/dbt-seed.png)
 
-## Como criar a imagem Docker do dbt?
+## How to create a DBT Docker image?
 ```
 cd src
 docker build -t dbt-snowflake .
 ```
 
-## Como entrar no container do dbt?
+## How to access DBT inside the container?
+Type the code below:
 ```
 docker run -it dbt-snowflake /bin/bash
 ```
 
-## Como orquestrar a dag do Airflow?
-A Dag já está criada, basta fazer o disparo. Exemplo:
+## How to run a dag into Airflow?
+
+The Dag is already created, just run it as below image:
 
 ![image](images/dag-sample.png)
 
-## Tabelas no Snowflake
+## Snowflake Platform
 
-### Tabelas ingeridas a partir dos arquivos CSV na camada de entrada!
+### Tables ingested from CSV files in the input layer!
 ![image](images/tables-dbt-stg.png)
 
-### Tabelas ingeridas na camada intermediária!
+### Tables ingested in the middle layer!
 ![image](images/tables-dbt-int.png)
 
-### Tabelas ingeridas na camada refinada!
+### Tables ingested into the refined layer!
 ![image](images/tables-dbt-ref.png)
 
-### Preview de uma das tabelas processadas pelo dbt, foram materializadas como views, conforme exemplo:
-
+### Table Preview of one of process by dbt environment, it was created materialized views, as shown in the below example:
 ![image](images/preview-table.png)
 
 
-## Conclusão
-Se você chegou até aqui, parabéns! Já tens um projeto de exemplo para orquestrar o dbt conectado no Snowflake com o Airflow.
+## Conclusion
+If you are here, you finally got it! Congratulations that's your first project with DBT, Airflow and Snowflake all connected together!
 
 
-## 📚 Referências
+## 📚 References
 
 - [Repo usado como base](https://github.com/jacob-mennell/snowflakeAirflowDBT)
 
@@ -213,6 +215,6 @@ Se você chegou até aqui, parabéns! Já tens um projeto de exemplo para orques
 
 
 ## Big Data Engineer Developer
-| Desenvolvedor      | LinkedIn                                   | Email                        | GitHub                                 |
+| Developer          | LinkedIn                                   | Email                        | GitHub                                 |
 |--------------------|--------------------------------------------|------------------------------|----------------------------------------|
 | Marcelo Peres    | [LinkedIn](https://www.linkedin.com/in/marcelo-peres-de/) | brmarcelo.peres@gmail.com        | [dbt-snowflake-airflow](https://github.com/Marcelo-Peres/dbt-snowflake-airflow)   |
