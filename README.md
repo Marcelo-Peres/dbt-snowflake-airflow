@@ -215,4 +215,4 @@ Se você chegou até aqui, parabéns! Já tens um projeto de exemplo para orques
 ## Big Data Engineer Developer
 | Desenvolvedor      | LinkedIn                                   | Email                        | GitHub                                 |
 |--------------------|--------------------------------------------|------------------------------|----------------------------------------|
-| Marcelo Peres    | [LinkedIn](https://www.linkedin.com/in/marcelo-peres-de/) | brmarcelo.peres@gmail.com        | [dbt-snowflake-airflow](https://github.com/Marcelo-Peres)   |
+| Marcelo Peres    | [LinkedIn](https://www.linkedin.com/in/marcelo-peres-de/) | brmarcelo.peres@gmail.com        | [dbt-snowflake-airflow](https://github.com/Marcelo-Peres/dbt-snowflake-airflow)   |
