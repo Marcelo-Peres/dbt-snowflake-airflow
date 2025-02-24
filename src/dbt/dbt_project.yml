@@ -1,0 +1,17 @@
+name: 'snowflake_airflow_dbt'
+version: 0.21
+config-version: 2
+profile: 'default'
+
+
+models:
+  snowflake_airflow_dbt:
+      # Applies to all files under models/example/
+      intermediate:
+          schema: intermediate
+          materialized: view
+          enabled: true
+      marts:
+          schema: marts
+          materialized: view
+          enabled: true
