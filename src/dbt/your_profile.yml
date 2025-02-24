@@ -1,0 +1,14 @@
+# Change this file for << profiles.yml >>
+default:
+  outputs:
+    dev:
+      account: your_account_info #change and put your details!
+      database: DBT_DEV_DB
+      password: dbtuser
+      role: DBT_ROLE
+      schema: DBT_SNOWFLAKE
+      threads: 1
+      type: snowflake
+      user: DBT_USER
+      warehouse: DBT_WH
+  target: dev
