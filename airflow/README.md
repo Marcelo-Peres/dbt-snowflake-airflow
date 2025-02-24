@@ -57,6 +57,6 @@ Parabéns! você já tem o Airflow rodando no Docker!
 https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html
 
 ## Big Data Developer
-| Big Data Developer | LinkedIn                                   | Email                        | Github Repository                      |
+| Big Data Developer | LinkedIn                                   | Email                        | Github                                 |
 |--------------------|--------------------------------------------|------------------------------|----------------------------------------|
 | Marcelo Peres      | [LinkedIn](https://www.linkedin.com/in/marcelo-peres-de/) | brmarcelo.peres@gmail.com        | [dbt-airflow-snowflake](https://github.com/Marcelo-Peres/dbt-snowflake-airflow/tree/main/airflow)   |
