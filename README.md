@@ -24,7 +24,7 @@ Step 6: Run dbt container and conect on Snowflake with Airflow
 
 
 ## Arquiteture
-![image](images/architecture-dbt-snowflake-airflow.png)
+![image](images/dbt-snowflake-airflow-drawio-02.png)
 
 ## Introduction
 
