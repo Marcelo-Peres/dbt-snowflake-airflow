@@ -16,9 +16,9 @@ Step 3: Conect dbt on Snowflake
 
 Step 4: Ingest CSV files into Snowflake using dbt
 
-Step 5: Criate a container imagem of dbt
+Step 5: Create a container imagem of dbt
 
-Step 6: Run dbt container and conect on Snowflake with Airflow
+Step 6: Run dbt container and connect on Snowflake with Airflow
 
 ## Follow the instructions below to complete all steps
 
