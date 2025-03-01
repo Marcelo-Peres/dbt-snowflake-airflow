@@ -12,7 +12,7 @@ Step 1: Create the Snowflake account
 
 Step 2: Install Docker on windows with GitBash
 
-Step 3: Conect dbt on Snowflake
+Step 3: Connect dbt on Snowflake
 
 Step 4: Ingest CSV files into Snowflake using dbt
 
